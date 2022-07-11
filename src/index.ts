@@ -33,11 +33,11 @@ async function getPullRequestLabelNames(
     return pr ? pr.labels.map((label) => label.name || "") : [];
 }
 
-function getInputLabels(): string[] {
-    const raw = core.getInput("labels", { required: true });
-    const json = JSON.parse(raw);
-    return Array.isArray(json) ? json : [];
-}
+// function getInputLabels(): string[] {
+//     const raw = core.getInput("labels", { required: true });
+//     const json = JSON.parse(raw);
+//     return Array.isArray(json) ? json : [];
+// }
 
 run().catch((err) => {
     core.setFailed(err.message);
