@@ -8,11 +8,11 @@ async function run() {
 
     const labelNames = await getPullRequestLabelNames(octokit);
 
-    const labels = getInputLabels();
-    const result = labels.every(
-        (label) => labelNames.findIndex((value) => label === value) >= 0
-    );
-    core.setOutput("result", result);
+//     const labels = getInputLabels();
+//     const result = labels.every(
+//         (label) => labelNames.findIndex((value) => label === value) >= 0
+//     );
+    core.setOutput("result", labelNames);
 }
 
 async function getPullRequestLabelNames(
